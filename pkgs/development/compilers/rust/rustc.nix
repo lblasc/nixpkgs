@@ -1,6 +1,6 @@
 { stdenv, removeReferencesTo, pkgsBuildBuild, pkgsBuildHost, pkgsBuildTarget
 , fetchurl, file, python2, tzdata, ps
-, llvmPackages_7, darwin, git, cmake, rustPlatform
+, llvmPackages_8, darwin, git, cmake, rustPlatform
 , which, libffi, gdb
 , withBundledLLVM ? false
 }:
@@ -9,7 +9,7 @@ let
   inherit (stdenv.lib) optional optionalString;
   inherit (darwin.apple_sdk.frameworks) Security;
 
-  llvmPackages = llvmPackages_7;
+  llvmPackages = llvmPackages_8;
 
   llvmSharedForBuild = pkgsBuildBuild.llvmPackages.llvm.override { enableSharedLibraries = true; };
   llvmSharedForHost = pkgsBuildHost.llvmPackages.llvm.override { enableSharedLibraries = true; };
