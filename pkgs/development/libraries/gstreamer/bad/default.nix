@@ -104,6 +104,7 @@ in stdenv.mkDerivation rec {
       sha256 = "0l1f6kqcl04q7w12a2b4qibcvjz6gqhs0csdv2wbvfd6zndpjm6p";
     })
     ./fix_pkgconfig_includedir.patch
+    ./opencv-4.3.patch
   ];
 
   nativeBuildInputs = [
