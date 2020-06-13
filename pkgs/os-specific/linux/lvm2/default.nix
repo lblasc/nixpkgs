@@ -22,6 +22,7 @@ stdenv.mkDerivation {
     "--enable-udev_sync"
     "--enable-pkgconfig"
     "--enable-cmdlib"
+    "--with-writecache=internal"
   ] ++ stdenv.lib.optional enable_dmeventd " --enable-dmeventd"
   ++ stdenv.lib.optionals (stdenv.hostPlatform != stdenv.buildPlatform) [
     "ac_cv_func_malloc_0_nonnull=yes"
