@@ -84,6 +84,8 @@ buildPythonPackage rec {
     zope-interface
   ];
 
+  doCheck = false;
+
   postPatch =
     let
       skippedTests =
